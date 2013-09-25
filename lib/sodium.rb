@@ -1,9 +1,9 @@
-require "sodium/blog"
-require "sodium/blog_post"
-require "sodium/tag"
-require "sodium/tag_cloud"
-require "sodium/version"
+require_relative "sodium/blog"
+require_relative "sodium/blog_post"
+require_relative "sodium/tag"
+require_relative "sodium/tag_cloud"
+require_relative "sodium/website"
+require_relative "sodium/version"
 
 module Sodium
-  # Your code goes here...
 end
