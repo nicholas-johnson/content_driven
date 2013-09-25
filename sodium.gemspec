@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Sodium::VERSION
   spec.authors       = ["Nicholas Johnson"]
   spec.email         = ["nicholas@forwardadvance.com"]
-  spec.description   = %q{A simple DSL for defining websites}
+  spec.description   = %q{A simple DSL for defining complete websites}
   spec.summary       = %q{Create your website in HAML, ERB, MD, etc}
   spec.homepage      = ""
   spec.license       = "MIT"
