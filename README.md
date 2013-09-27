@@ -1,8 +1,22 @@
 # Sodium
 
-A lightweight DLS for defining file based blogs and websites, no database required.
+A super clean DLS for defining blogs and websites, no database required. Works with any Ruby framework but plays especially nicely with Sinatra.
 
-Write your content in HAML, Markdown, ERB, whatever suits you. Place it in
+Define your site using calls like blog_post :post_title. Write your content in HAML, Markdown, ERB, whatever suits you. Place it in your views directory and you're ready to roll!
+
+## No database
+
+I blog on the train. I have no network access, so no access to a remote CMS. I wanted to be able to write my blog posts in HAML, and store them in a Git repository.
+
+I wrote Sodium to help me do that.
+
+## Sinatra
+
+Sodium will work with any Ruby framework from Camping to Rails, but plays especially well with Sinatra. If you'd like to use Sinatra, check out the sodium_sinatra gem instead. (note: not yet available)
+
+## Heroku
+
+Sodium is fully compatible with Heroku. Get your blog live in minutes on Heroku free tier.
 
 ## Installation
 
