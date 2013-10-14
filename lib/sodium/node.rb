@@ -17,7 +17,6 @@ module Sodium
     end
 
     def initialize &block
-      puts "*** initialising #{self.class}"
       self.children = NodeList.new
       if block_given?
         self.instance_eval &block
@@ -25,7 +24,6 @@ module Sodium
     end
 
     def add_child key, node = nil
-      puts "****adding child: #{key}"
       if key.is_a? Node
         node, key = key, (children.keys.length + 1).to_sym
       end
