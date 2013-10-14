@@ -8,7 +8,7 @@ module Sodium
   # Sodium defines a tree of content. Node is the base class.
   # A Node has a parent and zero or more children
   class Node
-    attr_accessor :parent, :children, :url, :title
+    attr_accessor :parent, :children, :url, :title, :date
 
     extend Sodium::DSL
 
