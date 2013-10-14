@@ -65,7 +65,7 @@ You'll get back an object of class Website which you can then query like so:
 
 Add additional content types by subclassing Sodium::Node. eg.
 
-    class Product < SodiumNode
+    class Product < Sodium::Node
       attr_accessor :price
     end
 
