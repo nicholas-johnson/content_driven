@@ -1,5 +1,5 @@
 module Sodium
-  class Tag
+  class Tag < Node
     attr_accessor :title
 
   end

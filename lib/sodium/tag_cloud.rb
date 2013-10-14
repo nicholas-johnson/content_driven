@@ -1,5 +1,5 @@
 module Sodium
-  class TagCloud
+  class TagCloud < Node
     attr_accessor :tags
 
     def initialize
