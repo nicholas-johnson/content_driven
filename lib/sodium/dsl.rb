@@ -1,5 +1,4 @@
 require 'active_support/core_ext/string'
-require_relative "content_types"
 
 module Sodium
   # Extends Sodium with methods to create content of all the types it knows about
