@@ -61,6 +61,28 @@ You'll get back an object of class Website which you can then query like so:
     # Get the first blog post
     @website.blog.first_post
 
+## Adding additional content types
+
+Add additional content types by subclassing Sodium::Node. eg.
+
+    class Product < SodiumNode
+      attr_accessor :price
+    end
+
+You can now call methods like this:
+
+    site = Sodium::Site do
+      add_product :kitty do
+        self.title = "Teeny black kitten"
+        self.price = "£5.99"
+      end
+    end
+
+    site.products.length
+    # => 1
+
+    site.product[:kitty]
+    # => Product
 
 ## Contributing
 
