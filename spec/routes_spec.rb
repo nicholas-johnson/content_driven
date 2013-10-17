@@ -1,9 +1,9 @@
 require 'spec_helper'
-require 'Stripes'
-require 'Stripes/node'
-require 'Stripes/site'
-require 'Stripes/blog'
-require 'Stripes/blog_post'
+require 'stripes_dsl'
+require 'stripes_dsl/node'
+require 'stripes_dsl/site'
+require 'stripes_dsl/blog'
+require 'stripes_dsl/blog_post'
 
 describe Stripes::Node do
   before :all do

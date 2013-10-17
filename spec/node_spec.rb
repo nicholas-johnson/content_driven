@@ -1,6 +1,6 @@
 require 'spec_helper'
-require 'Stripes'
-require 'Stripes/node'
+require 'stripes_dsl'
+require 'stripes_dsl/node'
 
 describe Stripes::Node do
 
