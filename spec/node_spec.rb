@@ -2,10 +2,6 @@ require 'spec_helper'
 require 'sodium'
 require 'sodium/node'
 
-# APP_ROOT = File.expand_path(File.join(File.dirname(__FILE__), '..', '..'))
-# $: << File.join(APP_ROOT, 'lib/sodium') # so rspec knows where your file could be
-# require 'node' # this loads the class you want to test
-
 describe Sodium::Node do
 
   before :each do
