@@ -1,14 +1,14 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'sodium/version'
+require 'stripes_dsl/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "sodium"
-  spec.version       = Sodium::VERSION
+  spec.name          = "stripes_dsl"
+  spec.version       = Stripes::VERSION
   spec.authors       = ["Nicholas Johnson"]
   spec.email         = ["nicholas@forwardadvance.com"]
-  spec.description   = %q{A simple DSL for defining websites}
+  spec.description   = %q{A clean, simple DSL for defining websites, no database required}
   spec.summary       = %q{Create your website in HAML, ERB, MD, etc}
   spec.homepage      = ""
   spec.license       = "MIT"

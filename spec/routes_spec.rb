@@ -1,15 +1,15 @@
 require 'spec_helper'
-require 'sodium'
-require 'sodium/node'
-require 'sodium/site'
-require 'sodium/blog'
-require 'sodium/blog_post'
+require 'Stripes'
+require 'Stripes/node'
+require 'Stripes/site'
+require 'Stripes/blog'
+require 'Stripes/blog_post'
 
-describe Sodium::Node do
+describe Stripes::Node do
   before :all do
     @blog_title = blog_title = "The Many Uses of Toast"
     @post_title = post_title = ["Decoration", "Recreation", "Procreation"]
-    @site = Sodium::Site.new do
+    @site = Stripes::Site.new do
       add_blog :blog do
         self.title = blog_title
         add_blog_post :post_1 do

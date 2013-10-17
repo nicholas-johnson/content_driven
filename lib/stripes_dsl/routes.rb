@@ -1,4 +1,4 @@
-module Sodium
+module Stripes
   module Routes
     # Walks the tree based on a url and returns the requested node
     # Will return nil if the node does not exist

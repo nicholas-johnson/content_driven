@@ -1,6 +1,6 @@
-# Sodium
+# Stripes DSL
 
-A super clean DLS for defining blogs and websites, no database required. Works with any Ruby framework but plays especially nicely with Sinatra.
+A super clean DLS for defining blogs and websites, no database required. Works with any Ruby framework but plays especially nicely with Sinatra and the Stripes framework.
 
 Define your site using calls like blog_post :post_title. Write your content in HAML, Markdown, ERB, whatever suits you. Place it in your views directory and you're ready to roll!
 
@@ -8,21 +8,21 @@ Define your site using calls like blog_post :post_title. Write your content in H
 
 I blog on the train. I have no network access, so no access to a remote CMS. I wanted to be able to write my blog posts in HAML, and store them in a Git repository.
 
-I wrote Sodium to help me do that.
+I wrote Stripes to help me do that.
 
 ## Sinatra
 
-Sodium will work with any Ruby framework from Camping to Rails, but plays especially well with Sinatra. If you'd like to use Sinatra, check out the sodium_sinatra gem instead. (note: not yet available)
+Stripes will work with any Ruby framework from Camping to Rails, but plays especially well with Sinatra. If you'd like to use Sinatra, check out the Stripes_sinatra gem instead. (note: not yet available)
 
 ## Heroku
 
-Sodium is fully compatible with Heroku. Get your blog live in minutes on Heroku free tier.
+Stripes is fully compatible with Heroku. Get your blog live in minutes on Heroku free tier.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'sodium'
+    gem 'Stripes'
 
 And then execute:
 
@@ -30,13 +30,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install sodium
+    $ gem install Stripes
 
 ## Usage
 
 Define your website like so
 
-    @website = Website.new do
+    @website = Stripes::Site.new do
       add_blog :my_blog do
         add_post :rule_world
           self.title = "How to Rule the World with Ruby"
@@ -63,18 +63,18 @@ You'll get back an object of class Website which you can then query like so:
 
 ## Adding additional content types
 
-Add additional content types by subclassing Sodium::Node. eg.
+Add additional content types by subclassing Stripes::Node. eg.
 
-    class Product < Sodium::Node
+    class Product < Stripes::Node
       attr_accessor :price
     end
 
 You can now call methods like this:
 
-    site = Sodium::Site do
+    site = Stripes::Site do
       add_product :kitty do
         self.title = "Teeny black kitten"
-        self.price = "£5.99"
+        self.price = 5.99
       end
     end
 

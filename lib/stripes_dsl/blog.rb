@@ -1,6 +1,6 @@
 require_relative 'node'
 
-module Sodium
+module Stripes
 
   class Blog < Node
     # TODO: Convenience shorthand methods

@@ -1,4 +1,4 @@
-module Sodium
+module Stripes
   class NodeList < Hash
 
     # TODO: Add methods like this:
