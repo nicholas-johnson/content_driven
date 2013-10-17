@@ -1,6 +1,7 @@
 require_relative "support"
 require_relative "dsl"
 require_relative "node_list"
+require_relative "routes"
 require 'active_support/core_ext/string'
 
 module Sodium
@@ -11,6 +12,7 @@ module Sodium
     attr_accessor :parent, :children, :url, :title, :date
 
     extend Sodium::DSL
+    include Sodium::Routes
 
     def self.inherited(subclass)
       define_dsl_for(subclass)
@@ -30,6 +32,18 @@ module Sodium
       node.parent = self
       node.url = key
       children[key] = node
+    end
+
+    def root?
+      self.parent.nil?
+    end
+
+    def to_sym
+      if root?
+        return :root
+      else
+        return self.url.to_sym
+      end
     end
 
   end
