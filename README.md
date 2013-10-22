@@ -1,8 +1,12 @@
-# Stripes DSL
+# Content Driven Gem
 
-A super clean DLS for defining blogs and websites, no database required. Works with any Ruby framework but plays especially nicely with Sinatra and the Stripes framework.
+A super clean DLS for defining blogs and websites with an emphasis on clean **Information Architecture**, sensible **Metadata** and **SEO**. Filesystem based so no database required. Works with any Ruby framework but plays especially nicely with Sinatra.
 
-Define your site using calls like blog_post :post_title. Write your content in HAML, Markdown, ERB, whatever suits you. Place it in your views directory and you're ready to roll!
+Aimed at developers. Define your site architecture using the simple Ruby DSL. Write your content in HAML, Markdown, ERB, whatever suits. Push to Heroku and you're live!
+
+Create custom content types simply by subclassing ContentDriven::Page. The DSL will learn and adapt.
+
+Define your site using calls like blog_post :post_title.
 
 ## No database
 
@@ -22,7 +26,7 @@ Stripes is fully compatible with Heroku. Get your blog live in minutes on Heroku
 
 Add this line to your application's Gemfile:
 
-    gem 'Stripes'
+    gem 'content_driven'
 
 And then execute:
 
@@ -30,13 +34,13 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install Stripes
+    $ gem install content_driven
 
 ## Usage
 
 Define your website like so
 
-    @website = Stripes::Site.new do
+    @website = ContentDriven::Site.new do
       add_blog :my_blog do
         add_post :rule_world
           self.title = "How to Rule the World with Ruby"
@@ -63,9 +67,9 @@ You'll get back an object of class Website which you can then query like so:
 
 ## Adding additional content types
 
-Add additional content types by subclassing Stripes::Node. eg.
+Add additional content types by subclassing Stripes::Page. eg.
 
-    class Product < Stripes::Node
+    class Product < Stripes::Page
       attr_accessor :price
     end
 

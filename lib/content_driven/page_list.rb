@@ -1,5 +1,5 @@
-module Stripes
-  class NodeList < Hash
+module ContentDriven
+  class PageList < Hash
 
     # TODO: Add methods like this:
     # def last_blog_post

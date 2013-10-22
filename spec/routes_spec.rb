@@ -1,15 +1,15 @@
 require 'spec_helper'
-require 'stripes_dsl'
-require 'stripes_dsl/node'
-require 'stripes_dsl/site'
-require 'stripes_dsl/blog'
-require 'stripes_dsl/blog_post'
+require 'content_driven'
+require 'content_driven/page'
+require 'content_driven/site'
+require 'content_driven/blog'
+require 'content_driven/blog_post'
 
-describe Stripes::Node do
+describe ContentDriven::Page do
   before :all do
     @blog_title = blog_title = "The Many Uses of Toast"
     @post_title = post_title = ["Decoration", "Recreation", "Procreation"]
-    @site = Stripes::Site.new do
+    @site = ContentDriven::Site.new do
       add_blog :blog do
         self.title = blog_title
         add_blog_post :post_1 do
@@ -23,7 +23,7 @@ describe Stripes::Node do
   end
 
   context "/" do
-    it "can get the current node" do
+    it "can get the current page" do
       expect(@site.content_for("/")).to be @site
     end
   end

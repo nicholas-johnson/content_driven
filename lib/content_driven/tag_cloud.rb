@@ -1,5 +1,5 @@
-module Stripes
-  class TagCloud < Node
+module ContentDriven
+  class TagCloud < Page
     attr_accessor :tags
     def initialize
       tags = {}

@@ -1,8 +1,8 @@
-require_relative 'node'
+require_relative 'page'
 
-module Stripes
+module ContentDriven
 
-  class Blog < Node
+  class Blog < Page
     # TODO: Convenience shorthand methods
     # alias_method :add_post,  :add_blog_post
     # alias_method :next_post, :next_blog_post

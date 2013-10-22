@@ -1,3 +1,3 @@
-module Stripes
+module ContentDriven
   VERSION = "0.1.0"
 end

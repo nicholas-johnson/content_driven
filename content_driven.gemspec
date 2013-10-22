@@ -1,16 +1,16 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'stripes_dsl/version'
+require 'content_driven/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "stripes_dsl"
-  spec.version       = Stripes::VERSION
+  spec.name          = "content_driven"
+  spec.version       = ContentDriven::VERSION
   spec.authors       = ["Nicholas Johnson"]
   spec.email         = ["nicholas@forwardadvance.com"]
   spec.description   = %q{A clean, simple DSL for defining websites, no database required}
-  spec.summary       = %q{Create your website in HAML, ERB, MD, etc}
-  spec.homepage      = ""
+  spec.summary       = %q{Emphasised great Information Architecture, Metadata and SEO. Define your website using the simple Ruby DSL. Build your pages in HAML, ERB, MD, etc. Deploy via git.}
+  spec.homepage      = "http://www.github.com/forwardadvance/content_driven"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
