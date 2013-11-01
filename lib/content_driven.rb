@@ -1,3 +1,4 @@
+require_relative "content_driven/article"
 require_relative "content_driven/blog"
 require_relative "content_driven/blog_post"
 require_relative "content_driven/tag"
