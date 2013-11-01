@@ -11,8 +11,8 @@ describe ContentDriven::Page do
 
   it "can be initialized with a block" do
     page = ContentDriven::Page.new {add_blog :test}
-    expect(page.children.length).to be(1)
-    expect(page.children[:test].class).to be(ContentDriven::Blog)
+    expect(page.length).to be(1)
+    expect(page[:test].class).to be(ContentDriven::Blog)
   end
 
   it "can be initialized with a nested block" do
@@ -21,10 +21,10 @@ describe ContentDriven::Page do
         add_blog :test_2
       end
     end
-    expect(page.children.length).to be(1)
-    expect(page.children[:test].class).to be(ContentDriven::Blog)
-    expect(page.children[:test].children.length).to be(1)
-    expect(page.children[:test].children[:test_2].class).to be(ContentDriven::Blog)
+    expect(page.length).to be(1)
+    expect(page[:test].class).to be(ContentDriven::Blog)
+    expect(page[:test].children.length).to be(1)
+    expect(page[:test].children[:test_2].class).to be(ContentDriven::Blog)
   end
 
   it "has a title" do
@@ -35,8 +35,8 @@ describe ContentDriven::Page do
   it "can add a child page with a key" do
     child = ContentDriven::Page.new
     @page.add_child :child, child
-    expect(@page.children.length).to be(1)
-    expect(@page.children[:child]).to be(child)
+    expect(@page.length).to be(1)
+    expect(@page[:child]).to be(child)
     expect(child.parent).to be(@page)
   end
 

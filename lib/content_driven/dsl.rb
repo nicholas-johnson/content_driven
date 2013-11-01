@@ -10,8 +10,8 @@ module ContentDriven
 
       # Allows us to call methods like site.blogs and blog.blog_posts
       define_method("get_#{class_name.pluralise}") do
-        children.dup.delete_if do |child|
-          !children[child].is_a? subclass
+        self.dup.delete_if do |child|
+          !self[child].is_a? subclass
         end
       end
 

@@ -16,8 +16,8 @@ describe ContentDriven::Page do
     expect(ContentDriven::Page.instance_methods.include? :add_pony).to be_true
     page = ContentDriven::Page.new
     page.add_pony :wow_a_pony
-    expect(page.children.length).to eq(1)
-    expect(page.children[:wow_a_pony].class).to be(ContentDriven::Pony)
+    expect(page.length).to eq(1)
+    expect(page[:wow_a_pony].class).to be(ContentDriven::Pony)
   end
 
   it "will gain a method of the form get_x when subclassed" do
@@ -42,7 +42,7 @@ describe ContentDriven::Page do
       add_dog :fifth
     end
     puts "Cats"
-    expect(page.children.length).to be(5)
+    expect(page.length).to be(5)
     expect(page.get_dogs.length).to be(2)
     expect(page.get_cats.length).to be(3)
   end

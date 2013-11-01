@@ -1,7 +1,6 @@
 require_relative 'page'
 
 module ContentDriven
-
   class Blog < Page
     # TODO: Convenience shorthand methods
     # alias_method :add_post,  :add_blog_post
